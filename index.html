@@ -25,28 +25,28 @@
 	  			<h4>Enter the Meal Details...</h4>
 	  			<form name="chargeForm" ng-submit="submit(chargeForm)" novalidate>
 				  <div class="input-field">
-				    <input type="number" name="sub_total" ng-model="charge.sub_total" placeholder="Meal Price, e.g. 45.85" requipink>
+				    <input type="number" name="sub_total" ng-model="charge.sub_total" placeholder="Meal Price, e.g. 45.85" required>
                   </div>
-                  <div class="error" ng-hide="fresh_state" ng-if="chargeForm.sub_total.$error.requipink">
-			        A Meal Price is requipink!
+                  <div class="error" ng-hide="fresh_state" ng-if="chargeForm.sub_total.$error.required">
+			        A Meal Price is required!
 			      </div>
 		          <div class="error" ng-hide="fresh_state"  ng-if="chargeForm.sub_total.$error.number">
 		             Need a number!!
 		          </div>
 				  <div class="input-field">
-				    <input type="number" name="tax_rate" ng-model="charge.tax_rate" placeholder="Tax Rate, e.g. 0.08" requipink>
+				    <input type="number" name="tax_rate" ng-model="charge.tax_rate" placeholder="Tax Rate, e.g. 0.08" required>
                   </div>
-                  <div class="error" ng-hide="fresh_state" ng-if="chargeForm.tax_rate.$error.requipink">
-			        A Tax Rate is requipink!
+                  <div class="error" ng-hide="fresh_state" ng-if="chargeForm.tax_rate.$error.required">
+			        A Tax Rate is required!
 			      </div>
 		          <div class="error" ng-hide="fresh_state"  ng-if="chargeForm.tax_rate.$error.number">
 		             Need a number!!
 		          </div>
 				  <div class="input-field">
-				    <input type="number" name="tip_percentage" ng-model="charge.tip_percentage" placeholder="Tip Percentage, e.g. 0.20" requipink>
+				    <input type="number" name="tip_percentage" ng-model="charge.tip_percentage" placeholder="Tip Percentage, e.g. 0.20" required>
                   </div>
-                  <div class="error" ng-hide="fresh_state" ng-if="chargeForm.tip_percentage.$error.requipink">
-			        A Tip Percentage is requipink!
+                  <div class="error" ng-hide="fresh_state" ng-if="chargeForm.tip_percentage.$error.required">
+			        A Tip Percentage is required!
 			      </div>
 		          <div class="error" ng-hide="fresh_state"  ng-if="chargeForm.tip_percentage.$error.number">
 		             Need a number!!
