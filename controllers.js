@@ -9,13 +9,13 @@ app.controller('WaitCalcCtrl', function($scope, DataService) {
 
     init()
 
-    var reset_charge = function() {
+    $scope.reset_charge = function() {
         $scope.charge = {};
         $scope.fresh_state = true;
     }
 
     $scope.reset_all = function() {
-        reset_charge();
+        $scope.reset_charge();
         DataService.reset()
         init()
     }
@@ -34,7 +34,7 @@ app.controller('WaitCalcCtrl', function($scope, DataService) {
             DataService.addCharge($scope.charge);
 
             $scope.current_charge = $scope.charge;
-            reset_charge();
+            $scope.reset_charge();
         } else {
             console.log('Fail Whale.');
         }
