@@ -5,7 +5,7 @@ app.controller('WaitCalcCtrl', function($scope, DataService) {
 
         $scope.transaction_history = DataService.getTransactionHistory();
         $scope.staff_earnings = DataService.getStaffEarnings();
-    }
+    };
 
     init()
 

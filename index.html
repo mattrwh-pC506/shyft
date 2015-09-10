@@ -23,7 +23,7 @@
                 <div meal-form class="card-panel white blue-grey-text" ng-cloak>                    
                 </div>
                 <div>
-                    <div class="blue-grey-text" ng-if="transaction_history.length" ng-cloak>
+                    <div class="blue-grey-text content-panel" ng-if="transaction_history.length" ng-cloak>
                         <h4>Last 3 Transactions </h4>
                         <div ng-if="transaction_history.length > 3" ng-cloak>
                             <button ng-hide="show_all" class="btn white pink-text" type="button" ng-click="show_all_transactions(true)" ng-cloak>See All</button>
@@ -35,11 +35,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col m5">
+            <div class="col m5 content-panel" ng-if="transaction_history.length" ng-cloak>
                 <div data-customer-charge></div>
                 <div data-staff-earnings></div>
                 <div>
-                    <button class="btn blue-grey darken-3 white-text" type="button" ng-click="reset_all()" ng-if="transaction_history.length" ng-cloak>Reset App</button>
+                    <button class="btn blue-grey darken-3 white-text" type="button" ng-click="reset_all()">Reset App</button>
                 </div>
 
             </div>

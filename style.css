@@ -33,17 +33,21 @@ textarea.materialize-textarea:focus:not([readonly]) {
   display: none !important;
 }
 
-.card-panel {  
+.content-panel {  
   overflow: hidden !important;
-  transition: all linear 1s;
-}
-.card-panel.ng-enter,
-.card-panel.ng-leave.ng-leave-active {
-  background-color: #ECEFF1;
-  box-shadow: none;
+  transition: all linear .15s;
 }
 
-.card-panel.ng-leave,
-.card-panel.ng-enter.ng-enter-active {
-  max-width: 100%;
+.content-panel.ng-enter,
+.content-panel.ng-leave.ng-leave-active,
+.btn.ng-enter,
+.btn.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.content-panel.ng-leave,
+.content-panel.ng-enter.ng-enter-active,
+.btn.ng-leave,
+.btn.ng-enter.ng-enter-active {
+  opacity: 1;
 }
