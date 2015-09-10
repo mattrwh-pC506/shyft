@@ -32,3 +32,21 @@ textarea.materialize-textarea:focus:not([readonly]) {
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
+
+.card-panel {  
+  overflow: hidden !important;
+}
+.side-panel {
+  transition: width 1s ease-in-out;
+}
+
+.side-panel.ng-enter,
+.side-panel.ng-leave.ng-leave-active {
+  max-width: 0;
+  white-space:nowrap;
+}
+
+.side-panel.ng-leave,
+.side-panel.ng-enter.ng-enter-active {
+  max-width: 100%;
+}

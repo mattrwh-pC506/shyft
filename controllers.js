@@ -3,7 +3,7 @@ app.controller('WaitCalcCtrl', function($scope, DataService) {
         $scope.show_all = false;
         $scope.fresh_state = true;
 
-        $scope.transaction_history = DataService.transaction_history;
+        $scope.transaction_history = DataService.getTransactionHistory();
         $scope.staff_earnings = DataService.getStaffEarnings();
     }
 
