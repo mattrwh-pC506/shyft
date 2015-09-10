@@ -37,7 +37,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
   overflow: hidden !important;
 }
 .side-panel {
-  transition: width 1s ease-in-out;
+  transition: all linear 1s;
 }
 
 .side-panel.ng-enter,
