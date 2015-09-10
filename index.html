@@ -20,73 +20,24 @@
     <div class="container" ng-controller="WaitCalcCtrl">
         <div class="row">
             <div class="col m7">
-                <div class="card-panel white blue-grey-text">
-                    <h4>Enter the Meal Details...</h4>
-                    <form name="chargeForm" ng-submit="submit(chargeForm)" novalidate>
-                        <div class="input-field">
-                            <input type="number" name="sub_total" ng-model="charge.sub_total" placeholder="Meal Price, e.g. $ 45.85"
-                            required>
-                        </div>
-                        <div class="error" ng-if="!fresh_state && chargeForm.sub_total.$error.required">
-                            A Meal Price is required!
-                        </div>
-                        <div class="error" ng-if="!fresh_state && chargeForm.sub_total.$error.number">
-                            Need a number!!
-                        </div>
-                        <div class="input-field">
-                            <input type="number" name="tax_rate" ng-model="charge.tax_rate" placeholder="Tax Rate, e.g. 8 %"
-                            required>
-                        </div>
-                        <div class="error" ng-if="!fresh_state && chargeForm.tax_rate.$error.required">
-                            A Tax Rate is required!
-                        </div>
-                        <div class="error" ng-if="!fresh_state && chargeForm.tax_rate.$error.number">
-                            Need a number!!
-                        </div>
-                        <div class="input-field">
-                            <input type="number" name="tip_percentage" ng-model="charge.tip_percentage" placeholder="Tip Percentage, e.g. 20 %"
-                            required>
-                        </div>
-                        <div class="error" ng-if="!fresh_state && chargeForm.tip_percentage.$error.required">
-                            A Tip Percentage is required!
-                        </div>
-                        <div class="error" ng-if="!fresh_state && chargeForm.tip_percentage.$error.number">
-                            Need a number!!
-                        </div>
-                        <div>
-                            <button class="btn blue-grey darken-3 white-text" type="submit">Submit</button>
-                            <button class="btn white blue-grey-text" type="button" ng-click="reset_charge()">Cancel</button>
-                        </div>
-                    </form>
+                <div meal-form class="card-panel white blue-grey-text" ng-cloak>                    
                 </div>
                 <div>
-                    <div class="blue-grey-text" ng-if="transaction_history.length">
-                        <h4>Last 5 Transactions </h4>
-                        <div ng-if="transaction_history.length > 3">
-                            <button ng-hide="show_all" class="btn white pink-text" type="button" ng-click="show_all_transactions(true)">See All</button>
-                            <button ng-show="show_all" class="btn white pink-text" type="button" ng-click="show_all_transactions(false)">See Less</button>
+                    <div class="blue-grey-text" ng-if="transaction_history.length" ng-cloak>
+                        <h4>Last 3 Transactions </h4>
+                        <div ng-if="transaction_history.length > 3" ng-cloak>
+                            <button ng-hide="show_all" class="btn white pink-text" type="button" ng-click="show_all_transactions(true)" ng-cloak>See All</button>
+                            <button ng-show="show_all" class="btn white pink-text" type="button" ng-click="show_all_transactions(false)" ng-cloak>See Less</button>
                         </div>
-                        <div ng-repeat="charge in transaction_history | transaction:show_all:3">
-                            <div class="card-panel white grey-text">Time: {{ charge.time }} / Total: {{ charge.charge.total | currency }}</div>
+                        <div ng-repeat="charge in transaction_history | transaction:show_all:3" ng-cloak>
+                            <div data-charge-toast></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col m5" ng-if="transaction_history.length">
-                <div class="card-panel blue-grey-text">
-                    <h4>Customer Charges</h4>
-                    <div>Sub Total: {{ current_charge.sub_total|currency }}</div>
-                    <div>Tax: {{ current_charge.tax|currency}}</div>
-                    <div>Tip: {{ current_charge.tip|currency }}</div>
-                    <hr>
-                    <div>Total: {{ current_charge.total|currency }}</div>
-                </div>
-                <div class="card-panel blue-grey-text">
-                    <h4>My Earnings Info</h4>
-                    <div>Tip Total: {{ staff_earnings.tip_total|currency }}</div>
-                    <div>Meal Count: {{ staff_earnings.meal_count }}</div>
-                    <div>Avg Tip Per Meal: {{ staff_earnings.avg_tip|currency }}</div>
-                </div>
+            <div class="col m5" ng-if="transaction_history.length" ng-cloak>
+                <div data-customer-charge></div>
+                <div data-staff-earnings></div>
                 <div>
                     <button class="btn blue-grey darken-3 white-text" type="button" ng-click="reset_all()">Reset App</button>
                 </div>
@@ -100,6 +51,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"
     type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
+    <script src="filters.js" type="text/javascript"></script>
+    <script src="directives.js" type="text/javascript"></script>    
+    <script src="services.js" type="text/javascript"></script>
+    <script src="controllers.js" type="text/javascript"></script>
 </body>
 
 </html>
