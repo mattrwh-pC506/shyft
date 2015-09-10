@@ -35,18 +35,15 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 .card-panel {  
   overflow: hidden !important;
-}
-.side-panel {
   transition: all linear 1s;
 }
-
-.side-panel.ng-enter,
-.side-panel.ng-leave.ng-leave-active {
-  max-width: 0;
-  white-space:nowrap;
+.card-panel.ng-enter,
+.card-panel.ng-leave.ng-leave-active {
+  background-color: #ECEFF1;
+  box-shadow: none;
 }
 
-.side-panel.ng-leave,
-.side-panel.ng-enter.ng-enter-active {
+.card-panel.ng-leave,
+.card-panel.ng-enter.ng-enter-active {
   max-width: 100%;
 }

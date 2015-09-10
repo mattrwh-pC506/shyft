@@ -1,4 +1,4 @@
-<div class="card-panel blue-grey-text">
+<div class="card-panel blue-grey-text" ng-if="transaction_history.length" ng-cloak>
     <h4>Customer Charges</h4>
     <div>Sub Total: {{ current_charge.sub_total|currency }}</div>
     <div>Tax: {{ current_charge.tax|currency}}</div>

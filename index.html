@@ -35,11 +35,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col m5 side-panel" ng-if="transaction_history.length" ng-cloak>
+            <div class="col m5">
                 <div data-customer-charge></div>
                 <div data-staff-earnings></div>
                 <div>
-                    <button class="btn blue-grey darken-3 white-text" type="button" ng-click="reset_all()">Reset App</button>
+                    <button class="btn blue-grey darken-3 white-text" type="button" ng-click="reset_all()" ng-if="transaction_history.length" ng-cloak>Reset App</button>
                 </div>
 
             </div>
