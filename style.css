@@ -52,9 +52,19 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 body {
     background-image: url('background-2.jpg');
+    background-color: #E9DBD0;
+    background-blend-mode: multiply;
     background-size: cover;
 }
 
-nav, .card-panel {
+nav {
+  background-color: white;
+}
+
+.card-panel {
   opacity: .925;
+}
+
+.main-content {
+  margin-top: 50px;
 }
