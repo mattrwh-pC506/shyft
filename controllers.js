@@ -43,5 +43,5 @@ app.controller('WaitCalcCtrl', function($scope, DataService) {
 });
 
 app.controller('HomeController', function($scope) {
-    $scope.about = "Lore Ipsum!"
+    $scope.about = "Click on New Meal above to get started."
 });
