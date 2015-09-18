@@ -41,3 +41,7 @@ app.controller('WaitCalcCtrl', function($scope, DataService) {
     };
 
 });
+
+app.controller('HomeController', function($scope) {
+    $scope.about = "Lore Ipsum!"
+});

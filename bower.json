@@ -1,0 +1,16 @@
+{
+  "name": "shyft",
+  "version": "0.0.0",
+  "authors": [
+    "Matthew Whitt <mwhitt.w@gmail.com>"
+  ],
+  "description": "waitstaff calculator",
+  "main": "[]",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-animate": "~1.4.6",
+    "angular-route": "~1.4.6"
+  },
+  "homepage": "https://github.com/mattrwh/shyft"
+}

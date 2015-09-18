@@ -1,0 +1,12 @@
+<div class="col m8 offset-m2">
+    <div class="blue-grey-text card-panel content-panel" ng-if="transaction_history.length" ng-cloak>
+        <h4 class="brown-text text-darken-1">Last 3 Transactions </h4>
+        <div ng-if="transaction_history.length > 3" ng-cloak>
+            <button ng-if="!show_all" class="btn white brown-text" type="button" ng-click="show_all_transactions(true)" ng-cloak>See All</button>
+            <button ng-if="show_all" class="btn white brown-text" type="button" ng-click="show_all_transactions(false)" ng-cloak>See Less</button>
+        </div>
+        <div ng-repeat="charge in transaction_history | transaction:show_all:3" ng-cloak>
+            <div data-charge-toast></div>
+        </div>
+    </div>
+</div>

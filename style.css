@@ -51,8 +51,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 
 body {
-    background-image: url('background-2.jpg');
-    background-color: #E9DBD0;
+    background-color: #93775F;
     background-blend-mode: multiply;
     background-size: cover;
 }
