@@ -41,4 +41,5 @@ app.factory("DataService", function DataService() {
         };
 
     return publicAPI;
-})
+});
+

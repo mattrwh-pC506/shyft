@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body ng-class="{loading: isLoading}">
 
     <nav>
         <div class="nav-wrapper">
@@ -23,7 +23,9 @@
     </nav>
     <div class="container">
         <div class="row main-content">
-            <div ng-view></div>
+            <div class="animate-view-container">
+                <div ng-view class="animate-view"></div>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
