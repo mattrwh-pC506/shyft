@@ -51,13 +51,13 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 
 body {
-    background-color: #93775F;
+    background-color: #DEF5EC;
     background-blend-mode: multiply;
     background-size: cover;
 }
 
 nav {
-  background-color: rgba(255, 255, 255, 0.45);
+  background-color: #008F5C;
 }
 
 .card-panel {
@@ -105,3 +105,11 @@ body, html {
 .animate-view.ng-enter.ng-enter-active { opacity:1; }
 .animate-view.ng-leave { opacity:1; z-index:99; }
 .animate-view.ng-leave.ng-leave-active { opacity:0; }
+
+.mint {
+  background-color: #008F5C;
+}
+
+.mint-text {
+  color: #008F5C;
+}
